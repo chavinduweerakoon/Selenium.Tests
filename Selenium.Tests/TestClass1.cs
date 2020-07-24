@@ -30,11 +30,29 @@ namespace Selenium.Tests
 
         }
 
-        //Select Dropdown by Text, Value and Index.
-        public void WikiSearchCollection()
+        //Implicit wait -when you know the exact wait time 
+        [Test]
+        public void sampleImplicitWait()
+        {
+            IWebDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("https://www.wikipedia.org/");
+            
+        }
+
+        //explicit wait - when we are not sure about the time but has a idea of the range
+        [Test]
+        public void sampleExplicittWait()
         {
 
         }
+
+        // can give a specific time to check ,can assign another paramter to loop the test.
+        [Test]
+        public void sampleFluentWait()
+        {
+
+        }
+
 
     }
 
