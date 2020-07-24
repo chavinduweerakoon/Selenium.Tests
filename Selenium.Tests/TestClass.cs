@@ -48,7 +48,31 @@ namespace Selenium.Tests
             driver.Quit();
 
         }
+        //checking the titie page 
+        [Test]
+        public void CheckTitle()
+        {
+            string ActualResult;
+            string ExpectedResult = "Google";
+            IWebDriver driver = new FirefoxDriver();
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            driver.Manage().Window.Maximize();
+            ActualResult = driver.Title;
+            if(ActualResult.Contains(ExpectedResult))
+                {
+                Assert.IsTrue(true, "Test Case Passed");
+            }
+            else
+            {
+                Assert.IsFalse(false, "Test case failed");
+            }
+            driver.Close();
+            driver.Quit();
+
+        }
+
         
-       
+
+
     }
 }
